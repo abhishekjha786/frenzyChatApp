@@ -1,0 +1,410 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/chatapp/chat_message.dart', 'packages/flutter/src/widgets/icon_theme.dart', 'packages/flutter/src/widgets/icon_theme_data.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/material/text_field.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart'], (function load__packages__chatapp__chat_screen_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__chatapp__chat_message$46dart, packages__flutter__src__widgets__icon_theme$46dart, packages__flutter__src__widgets__icon_theme_data$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__material__text_field$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const editable_text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__editable_text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const chat_message = packages__chatapp__chat_message$46dart.chat_message;
+  const icon_theme = packages__flutter__src__widgets__icon_theme$46dart.src__widgets__icon_theme;
+  const icon_theme_data = packages__flutter__src__widgets__icon_theme_data$46dart.src__widgets__icon_theme_data;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const text_field = packages__flutter__src__material__text_field$46dart.src__material__text_field;
+  const input_decorator = packages__flutter__src__material__icon_button$46dart.src__material__input_decorator;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  var chat_screen = Object.create(dart.library);
+  var $insert = dartx.insert;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    ChatMessageL: () => (T.ChatMessageL = dart.constFn(dart.legacy(chat_message.ChatMessage)))(),
+    JSArrayOfChatMessageL: () => (T.JSArrayOfChatMessageL = dart.constFn(_interceptors.JSArray$(T.ChatMessageL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "text",
+        [_Location_column]: 7,
+        [_Location_line]: 16,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 31,
+        [_Location_line]: 15,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 8,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 8
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 17,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onSubmitted",
+        [_Location_column]: 17,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7, C[8] || CT.C8], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([C[11] || CT.C11], T._LocationL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 30,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 4,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 4
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 40,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15], T._LocationL());
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 19,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 19,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.constList([C[18] || CT.C18, C[19] || CT.C19], T._LocationL());
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[17] || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 15,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22, C[23] || CT.C23], T._LocationL());
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 38,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 9,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.constList([C[29] || CT.C29, C[30] || CT.C30], T._LocationL());
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[28] || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 7,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.constList([C[33] || CT.C33, C[34] || CT.C34], T._LocationL());
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[32] || CT.C32,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 24,
+        [_Location_file]: "file:///E:/MyFlutter/chatapp/lib/chat_screen.dart"
+      });
+    }
+  }, false);
+  var C = Array(35).fill(void 0);
+  var I = ["package:chatapp/chat_screen.dart"];
+  chat_screen.ChatScreen = class ChatScreen extends framework.StatefulWidget {
+    createState() {
+      return new chat_screen._ChatScreenState.new();
+    }
+  };
+  (chat_screen.ChatScreen.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    chat_screen.ChatScreen.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = chat_screen.ChatScreen.prototype;
+  dart.addTypeTests(chat_screen.ChatScreen);
+  dart.addTypeCaches(chat_screen.ChatScreen);
+  dart.setMethodSignature(chat_screen.ChatScreen, () => ({
+    __proto__: dart.getMethods(chat_screen.ChatScreen.__proto__),
+    createState: dart.fnType(dart.legacy(chat_screen._ChatScreenState), [])
+  }));
+  dart.setLibraryUri(chat_screen.ChatScreen, I[0]);
+  var _textController = dart.privateName(chat_screen, "_textController");
+  var _message = dart.privateName(chat_screen, "_message");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var _handleSubmitted = dart.privateName(chat_screen, "_handleSubmitted");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  var _textComposerWidget = dart.privateName(chat_screen, "_textComposerWidget");
+  chat_screen._ChatScreenState = class _ChatScreenState extends framework.State$(dart.legacy(chat_screen.ChatScreen)) {
+    [_handleSubmitted](text) {
+      this[_textController].clear();
+      let message = new chat_message.ChatMessage.new({text: text, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+      this.setState(dart.fn(() => {
+        this[_message][$insert](0, message);
+      }, T.VoidToNull()));
+    }
+    [_textComposerWidget]() {
+      return new icon_theme.IconTheme.new({data: new icon_theme_data.IconThemeData.new({color: colors.Colors.purple}), child: new container.Container.new({margin: C[3] || CT.C3, child: new basic.Row.new({children: T.JSArrayOfWidgetL().of([new basic.Flexible.new({child: new text_field.TextField.new({decoration: new input_decorator.InputDecoration.collapsed({hintText: "Send a mesage"}), controller: this[_textController], onSubmitted: dart.bind(this, _handleSubmitted), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), $creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), new container.Container.new({margin: C[12] || CT.C12, child: new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.send, {$creationLocationd_0dea112b090073317d4: C[13] || CT.C13}), onPressed: dart.fn(() => this[_handleSubmitted](this[_textController].text), T.VoidTovoid()), $creationLocationd_0dea112b090073317d4: C[16] || CT.C16}), $creationLocationd_0dea112b090073317d4: C[20] || CT.C20})]), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27}), $creationLocationd_0dea112b090073317d4: C[31] || CT.C31});
+    }
+    build(context) {
+      return this[_textComposerWidget]();
+    }
+  };
+  (chat_screen._ChatScreenState.new = function() {
+    this[_textController] = new editable_text.TextEditingController.new();
+    this[_message] = T.JSArrayOfChatMessageL().of([]);
+    chat_screen._ChatScreenState.__proto__.new.call(this);
+    ;
+  }).prototype = chat_screen._ChatScreenState.prototype;
+  dart.addTypeTests(chat_screen._ChatScreenState);
+  dart.addTypeCaches(chat_screen._ChatScreenState);
+  dart.setMethodSignature(chat_screen._ChatScreenState, () => ({
+    __proto__: dart.getMethods(chat_screen._ChatScreenState.__proto__),
+    [_handleSubmitted]: dart.fnType(dart.void, [dart.legacy(core.String)]),
+    [_textComposerWidget]: dart.fnType(dart.legacy(framework.Widget), []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(chat_screen._ChatScreenState, I[0]);
+  dart.setFieldSignature(chat_screen._ChatScreenState, () => ({
+    __proto__: dart.getFields(chat_screen._ChatScreenState.__proto__),
+    [_textController]: dart.finalFieldType(dart.legacy(editable_text.TextEditingController)),
+    [_message]: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(chat_message.ChatMessage))))
+  }));
+  dart.trackLibraries("packages/chatapp/chat_screen.dart", {
+    "package:chatapp/chat_screen.dart": chat_screen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["chat_screen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAKoC;IAAkB;;;;;;EACtD;;;;;;;;;;;;;;;;;;;;;;uBAM+B;AACJ,MAAvB,AAAgB;AACJ,oBAAc,wCAClB,IAAI;AAIV,MAFF,cAAS;AACoB,QAA3B,AAAS,wBAAO,GAAG,OAAO;;IAE9B;;AAGE,YAAW,qCACC,8CAA4B,+BAC3B,2DAEE,6BACC,yBACJ,+BACS,0CAED,yDAAoC,+BAChC,8CACC,2IAGb,6DAES,sCACG,kBAAW,yFACV,cAAM,uBAAiB,AAAgB;IAMlE;UAG0B;AACxB,YAAO;IACT;;;IA3C4B,wBAAsB;IAC1B,iBAAwB;;;EA2ClD","file":"../../../packages/chatapp/chat_screen.dart.lib.js"}');
+  // Exports:
+  return {
+    chat_screen: chat_screen
+  };
+}));
+
+//# sourceMappingURL=chat_screen.dart.lib.js.map
